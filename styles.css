@@ -181,3 +181,14 @@ section { padding: 88px 0; }
 @media (max-width: 640px) {
   .value-grid { grid-template-columns: 1fr; }
 }
+
+/* Fuera de la zona de confort */
+.story { background: var(--navy); color: #eef1f5; }
+.story .eyebrow { color: var(--accent); }
+.story-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+.story-body p { color: #c9d0da; font-size: 1.08rem; margin: 0 0 1em; }
+.story-body p:nth-of-type(3) { color: #fff; font-weight: 500; }
+.facts { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.facts li { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: .35em 1em; font-size: .92rem; color: #c9d0da; }
+.facts strong { color: #fff; }
+@media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; gap: 8px; } }
