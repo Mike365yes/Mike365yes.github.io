@@ -161,3 +161,23 @@ section { padding: 88px 0; }
 @media (max-width: 640px) {
   .steps-4, .stats-row { grid-template-columns: 1fr; }
 }
+
+/* Qué aporto */
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.value-grid div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.value-grid h4 { font-size: 1.05rem; }
+.value-grid p { margin: 0; color: var(--muted); font-size: .95rem; }
+.who { color: var(--muted); margin: -.3em 0 0; font-size: .95rem; }
+
+/* Trabajar juntos */
+.collab { background: var(--surface); border-top: 1px solid var(--line); }
+.collab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.collab-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; background: var(--bg); display: flex; flex-direction: column; align-items: flex-start; }
+.collab-card p { color: var(--muted); flex: 1; }
+@media (max-width: 900px) {
+  .value-grid { grid-template-columns: 1fr 1fr; }
+  .collab-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .value-grid { grid-template-columns: 1fr; }
+}

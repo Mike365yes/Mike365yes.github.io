@@ -1,4 +1,4 @@
-// Pestañas por responsable. El hash de la URL (#marketing, #ventas…) abre directamente esa área.
+// Pestañas por perfil de decisor. El hash de la URL (#it, #marketing…) abre directamente ese perfil.
 const tabs = document.querySelectorAll('.tabs button');
 const panels = document.querySelectorAll('.role');
 const ids = [...panels].map(p => p.id);
@@ -6,7 +6,7 @@ const ids = [...panels].map(p => p.id);
 function show(id, scroll) {
   tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.role === id));
   panels.forEach(p => { p.hidden = p.id !== id; });
-  if (scroll) document.getElementById('responsables').scrollIntoView();
+  if (scroll) document.getElementById('interlocutores').scrollIntoView();
 }
 
 tabs.forEach(t => t.addEventListener('click', () => {
@@ -25,3 +25,9 @@ form?.addEventListener('submit', e => {
   e.preventDefault();
   form.querySelector('.form-note').hidden = false;
 });
+
+// Los botones de "Trabajar juntos" preseleccionan el motivo en el formulario.
+document.querySelectorAll('[data-motivo]').forEach(a => a.addEventListener('click', () => {
+  const select = document.querySelector('select[name="motivo"]');
+  if (select) select.value = a.dataset.motivo;
+}));
