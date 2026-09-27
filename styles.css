@@ -144,3 +144,20 @@ section { padding: 88px 0; }
   .steps, .timeline { grid-template-columns: 1fr; }
   .role { padding: 22px; }
 }
+
+/* Metodología */
+.journey { display: flex; flex-wrap: wrap; gap: 6px; margin: 32px 0 8px; }
+.journey span { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .35em .9em; font-size: .9rem; position: relative; }
+.journey span:not(:last-child)::after { content: "→"; margin-left: .6em; color: var(--accent); }
+.journey span:last-child { background: var(--navy); color: #fff; border-color: var(--navy); }
+.steps-4 { grid-template-columns: repeat(4, 1fr); }
+.method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
+.method-grid p { color: var(--muted); margin: 0; }
+.stats-row { grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+@media (max-width: 900px) {
+  .steps-4 { grid-template-columns: 1fr 1fr; }
+  .method-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 640px) {
+  .steps-4, .stats-row { grid-template-columns: 1fr; }
+}
